@@ -10,3 +10,4 @@
 - 2026-10-11: User supplied Sachin-Sabio/ai-code-interpreter as the repository URL, superseding the earlier owner choice. Connected sachin-a-iitm account has pull=true, push=false; publishing awaits write authentication or a repository under the connected owner.
 - 2026-10-11: Bound OS-level stdout/stderr writes with file size limits as well as Python stdout capture limits, to prevent low-level writes exhausting server memory.
 - 2026-10-11: Local pytest is blocked during collection by macOS native extension mmap denial, on both Python 3.14 and 3.13. Do not claim application tests passed. Preserve actual results and require Linux CI plus live execution verification.
+- 2026-10-11: User reconfirmed that the assignment must be under sachin-a-iitm, superseding the supplied Sachin-Sabio URL. Create the repository under sachin-a-iitm and point Render there. An earlier push to Sachin-Sabio had completed before the correction; do not use that repository for deployment.

@@ -26,9 +26,9 @@ On Linux install `libseccomp2` first. The Dockerfile uses Python 3.11, installs 
 
 ## GitHub and Render deployment
 
-1. Use the supplied repository `https://github.com/Sachin-Sabio/ai-code-interpreter`; authenticate GitHub CLI or the connector with write access. The connected sachin-a-iitm account currently has read-only access.
+1. Use `https://github.com/sachin-a-iitm/ai-code-interpreter`, the explicitly confirmed assignment owner.
 2. Publish the contents of this assignment directory as the repository root, excluding `.venv`, caches, and secrets. Include `.github/workflows/test.yml`; let CI finish before submitting.
-3. In https://dashboard.render.com select **New → Blueprint**, connect the `Sachin-Sabio/ai-code-interpreter` repository, and use `render.yaml` on `main`.
+3. In https://dashboard.render.com select **New → Blueprint**, connect the `sachin-a-iitm/ai-code-interpreter` repository, and use `render.yaml` on `main`.
 4. Enter your AIPipe token for the prompted `AIPIPE_TOKEN` secret. The Blueprint selects a free Docker web service. Apply and wait for the deploy logs to finish.
 5. Copy the actual service URL from Render. Verify execution, not just `/health`, because health does not exercise kernel sandbox support.
 6. Run the live verification script below. A 503 means the sandbox failed: inspect service logs and use a Linux host supporting Landlock/seccomp rather than disabling isolation.
